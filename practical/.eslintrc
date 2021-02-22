@@ -1,0 +1,46 @@
+{
+
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+
+  "globals": {
+    "document": false,
+    "escape": false,
+    "navigator": false,
+    "unescape": false,
+    "window": false,
+    "describe": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+    "afterEach": true,
+    "it": true,
+    "expect": true,
+    "sinon": true
+  },
+
+  "parser": "babel-eslint",
+
+  "plugins": [
+    "fp"
+  ],
+
+  "rules": {
+    "camelcase": "off",
+    "no-const-assign": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-vars": "warn",
+    "no-trailing-spaces": "warn",
+    "eol-last": "warn",
+    "quotes": "warn",
+    "valid-typeof": "warn",
+    "fp/no-unused-expression": "off",
+    "fp/no-nil": "off"
+  },
+
+  "extends": ["standard", "plugin:fp/recommended"]
+}
