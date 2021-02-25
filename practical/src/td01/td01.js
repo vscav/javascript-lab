@@ -11,7 +11,7 @@ const numbers = [0, 1, 1, 2, 3, 5, 8, 13, 21];
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 sum = numbers.reduce(reducer, 0);
 
-export var ex1 = sum;
+export const ex1 = sum;
 
 /**
  * Exercise 2
@@ -19,11 +19,11 @@ export var ex1 = sum;
  * Also convert it to ES6.
  */
 
-var animals1 = ["dog", "cat", "axolotl", "bird"];
-var animals2 = ["lion", "squirrel", "bear", "pig"];
+const animals1 = ["dog", "cat", "axolotl", "bird"];
+const animals2 = ["lion", "squirrel", "bear", "pig"];
 
-export var allTheAnimals = [...animals1, ...animals2];
-export var ex2 = allTheAnimals;
+export const allTheAnimals = [...animals1, ...animals2];
+export const ex2 = allTheAnimals;
 
 /**
  * Exercice 3
@@ -35,7 +35,7 @@ const makeDogACat = (thing) => {
   return thing === "dog" ? "cat" : thing;
 };
 
-export var ex3 = makeDogACat;
+export const ex3 = makeDogACat;
 
 /**
  * Exercice 4
