@@ -216,13 +216,7 @@ export const specificHen = (hens) =>
 
 // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign
 
-export const mergeObjects = (objects) => {
-  let final = {};
-  objects.forEach((o) => {
-    Object.assign(final, o);
-  });
-  return final;
-};
+export const mergeObjects = (objects) => objects.reduce((acc, o) => Object.assign(acc, o) , {})
 
 // Write the function that will take two arrays, merge them but remove duplicates. You are not allowed to use a Set.
 
