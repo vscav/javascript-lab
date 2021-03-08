@@ -101,19 +101,10 @@ export const div = (attributes, children) =>
  * </figure>
  */
 
-// export const generateMarkupForDog = (url, nom, description) =>
-//   figure(null, [
-//     img({ src: url }),
-//     figcaption(null, [p(null, [nom]), p(null, [description])]),
-//   ]);
-
 export const generateMarkupForDog = (url, nom, description) =>
-  tagCreator("figure")(null)([
-    tagCreator("img")({ src: url })([]),
-    tagCreator("figcaption")(null)([
-      tagCreator("p")(null)([nom]),
-      tagCreator("p")(null)([description]),
-    ]),
+  figure(null, [
+    img({ src: url }),
+    figcaption(null, [p(null, [nom]), p(null, [description])]),
   ]);
 
 /** Exercise 2.3
@@ -122,15 +113,8 @@ export const generateMarkupForDog = (url, nom, description) =>
  * is required, the root will be a simple `div`
  */
 
-// export const generateMarkupForAllDogs = (dogs) =>
-//   createTag(
-//     "div",
-//     null,
-//     dogs.map((dog) => generateMarkupForDog(dog.url, dog.nom, dog.description))
-//   );
-
 export const generateMarkupForAllDogs = (dogs) =>
-  tagCreator("div")(null)([
+  div(null, [
     dogs.map((dog) => generateMarkupForDog(dog.url, dog.nom, dog.description)),
   ]);
 
@@ -139,8 +123,7 @@ export const generateMarkupForAllDogs = (dogs) =>
  * otherwise we return an error message
  */
 
-// export const errorMessage = createTag("div", {class: "error-message"}, ["You don't like dogs."]);
-export const errorMessage = tagCreator("div")({ class: "error-message" }, [
+export const errorMessage = div({ class: "error-message" }, [
   "You don't like dogs.",
 ]);
 export const conditionallyDisplayDogs = (likesDogs, dogs) =>
