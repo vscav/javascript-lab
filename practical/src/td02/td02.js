@@ -79,11 +79,11 @@ export const p = (attributes, children) =>
  *  Create a function which, for a given tag type, returns a function to create it:
  */
 
-const tagCreator = (tagType) => (attributes = null) => (children = []) =>
+const tagCreator = (tagType) => (attributes, children) =>
   createTag(tagType, attributes, children);
 
 export const div = (attributes, children) =>
-  tagCreator("div")(attributes)(children);
+  tagCreator("div")(attributes, children);
 
 /**
  * Exercise 2.2
